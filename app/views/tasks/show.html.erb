@@ -8,3 +8,5 @@
 
 <% end %>
 <p><%= link_to "Back to my list", tasks_path %></p>
+<p><%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<p><%= link_to "Edit ", edit_task_path(@task) %></p>

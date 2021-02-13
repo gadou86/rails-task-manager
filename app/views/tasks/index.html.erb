@@ -1,26 +1,17 @@
+<div class="container p-3">
+
 <h1>My Tasks</h1>
+<div class="list">
 <% @tasks.each do |t| %>
   <ul class="list">
   <% if t.completed == true %>
-  <input type="checkbox" checked>
-    <li class="list-items"><%= link_to t.title, task_path(t)  %></li>
-     <li> <%=  t.completed %></li>
+    <li class="list-items">  <%= link_to t.title, task_path(t)  %>  <input type="checkbox" checked>
+</li>
      <% else %>
-     <input type="checkbox">
-    <li class="list-items"><%= link_to t.title, task_path(t)  %></li>
-     <li> <%=  t.completed %></li>
+    <li class="list-items"><%= link_to t.title, task_path(t)  %>     <input type="checkbox"></li>
      <% end %>
   </ul>
 <% end %>
-
-
-
-
-<%# <form action="/tasks" method="post">
-<label for=""></label>
-<input type="text">
-<label for=""></label>
-<input type="text">
-<label for=""></label>
-<input type="text">
-</form> %>
+<p><%= link_to "create a new task", new_task_path %></p>
+</div>
+</div>

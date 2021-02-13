@@ -8,5 +8,5 @@
 
 
 # 10.times do |t|
-#   tit
+#   title: FAKER::compa
 # end
