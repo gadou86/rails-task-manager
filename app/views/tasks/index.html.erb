@@ -1,7 +1,11 @@
-<h1>My tasks</h1>
+
+<div class="container text-center">
+
+<h1 class="header">My tasks</h1>
 
 
-<ul id="tasks text">
+<div class="">
+<ul id="tasks">
   <% @tasks.each do |task| %>
     <li>
       <% if task.completed %>
@@ -17,9 +21,11 @@
     </li>
   <% end %>
 </ul>
+</div>
 
 <hr>
 
 <%= link_to new_task_path do %>
   <i class="fa fa-plus"></i> Add a new task
 <% end %>
+</div>
