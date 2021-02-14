@@ -1,17 +1,25 @@
-<div class="container p-3">
+<h1>My tasks</h1>
 
-<h1>My Tasks</h1>
-<div class="list">
-<% @tasks.each do |t| %>
-  <ul class="list">
-  <% if t.completed == true %>
-    <li class="list-items">  <%= link_to t.title, task_path(t)  %>  <input type="checkbox" checked>
-</li>
-     <% else %>
-    <li class="list-items"><%= link_to t.title, task_path(t)  %>     <input type="checkbox"></li>
-     <% end %>
-  </ul>
+
+<ul id="tasks text">
+  <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed %>
+        <i class="fa fa-check-square-o"></i>
+      <% else %>
+        <i class="fa fa-square-o"></i>
+      <% end %>
+      <%= link_to task.title, task_path(task.id) %>
+      ·
+      <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to new_task_path do %>
+  <i class="fa fa-plus"></i> Add a new task
 <% end %>
-<p><%= link_to "create a new task", new_task_path %></p>
-</div>
-</div>
