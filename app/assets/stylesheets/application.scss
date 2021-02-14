@@ -10,8 +10,18 @@ h1{
 .pull-right {
   // color: rgb(181, 179, 116);
   text-align: center;
+  border: none;
+  margin: 3px 0;
 }
 
+.btn {
+  background-color: rgb(127, 191, 230);
+  border: none;
+}
+
+.btn:hover {
+  background-color:rgb(168, 158, 118)
+}
 // Thats from the new.html.erb
 
 .header-show {
@@ -24,6 +34,12 @@ a {
   font-family: "Helvetica Neue";
   font-size: 15px;
   color: rgb(75, 75, 75);
+}
+
+a:hover {
+  color: rgb(186, 186, 186);
+  text-decoration: none;
+  transition: .5s;
 }
 .container {
   // border: 0.5px solid rgb(136, 169, 189);
