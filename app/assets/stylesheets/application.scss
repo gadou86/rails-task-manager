@@ -2,18 +2,36 @@
 body {
   background-color: lightyellow;
 }
+h1{
+  color: rgb(75, 75, 75);
+  padding: 15px 0 10px 0;
+}
+
+a {
+  font-family: "Helvetica Neue";
+  font-size: 15px;
+  color: rgb(75, 75, 75);
+  
+}
 .container {
-  background-color: rgb(240, 210, 210);
+  border: 0.5px solid rgb(136, 169, 189);
+  background-color: rgb(166, 204, 228);
   margin: 10px auto;
   border-radius: 20px;
-  height: 500px;
-  width: 300px;
+  height: auto;
+  width: 250px;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
 }
+.the-list {
+  color: black ;
+}
+
 #tasks {
   list-style: none;
   padding-left: 0;
 }
+
 
 
 

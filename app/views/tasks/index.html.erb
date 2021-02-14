@@ -3,11 +3,13 @@
 
 <h1 class="header">My tasks</h1>
 
+<hr>
+
 
 <div class="">
 <ul id="tasks">
   <% @tasks.each do |task| %>
-    <li>
+    <li class="the-list">
       <% if task.completed %>
         <i class="fa fa-check-square-o"></i>
       <% else %>
